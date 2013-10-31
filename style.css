@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(image/bg.jpg);
+}
+
+.image-container{
+    width: 600px;
+    height: 401px;
+    position: relative;
+    margin: 25px auto;
+    box-shadow: 0 0 2px 1px #525447;
+    border : 12px solid #fff;
+}
+
+input[type='radio']{
+    display: none;
+}
+
+label{
+    position: absolute;
+    width: 35px;
+    font-size: 22px;
+    text-align: center;
+    padding: 5px 0;
+    background: #5EAEFF;
+    border-radius: 50%;
+    z-index: 60;
+    top: 430px;
+    display: block;
+    color : #fff;
+    box-shadow:0 0 0 4px rgba(165, 173, 180, 0.53);
+    cursor: pointer;
+    -webkit-transition : all .5s ease;
+    -moz-transition : all .5s ease;
+}
+
+label[for='button-1']{
+    left: 210px;
+}
+
+label[for='button-2']{
+    left: 260px;
+}
+
+label[for='button-3']{
+    left: 308px;
+}
+
+label[for='button-4']{
+    left: 356px;
+}
+
+.image{
+    width: 600px;
+    overflow: hidden;
+}
+
+.image > *{
+    width: 150px;
+    height: 401px;
+    position: relative;
+    float: left;
+}
+
+.part1 > * , .part2 > * , .part3 > * , .part4 > *{
+    position: absolute;
+    width: inherit;
+    height : inherit;
+}
+
+input[type='radio']:checked + label{
+    box-shadow:0 0 0 4px rgba(170, 173, 161, 0.35), inset 0 0 10px 1px #8C8D97;
+    color : #5EAEFF;
+    background: #fff;
+}
+
+input[type='radio']#button-1:checked~label[for='button-1']{
+    box-shadow:0 0 0 4px rgba(170, 173, 161, 0.35), inset 0 0 10px 1px #8C8D97;
+    color : #5EAEFF;
+    background: #fff;
+}
+
+input[type='radio']#button-2:checked~label[for='button-2']{
+    box-shadow:0 0 0 4px rgba(170, 173, 161, 0.35), inset 0 0 10px 1px #8C8D97;
+    color : #5EAEFF;
+    background: #fff;
+}
+
+input[type='radio']#button-3:checked~label[for='button-3']{
+    box-shadow:0 0 0 4px rgba(170, 173, 161, 0.35), inset 0 0 10px 1px #8C8D97;
+    color : #5EAEFF;
+    background: #fff;
+}
+
+input[type='radio']#button-4:checked~label[for='button-4']{
+    box-shadow:0 0 0 4px rgba(170, 173, 161, 0.35), inset 0 0 10px 1px #8C8D97;
+    color : #5EAEFF;
+    background: #fff;
+}
+
+input[type='radio']#button-1:checked ~ .image .pi1  {
+    z-index: 18;
+    width : inherit;
+    -webkit-transition : width .6s ease-in-out ;
+    -moz-transition : width .6s ease-in-out ;
+}
+
+input[type='radio']#button-1:checked ~ .image .pi2 , .pi3 , .pi4  {
+    width : 0;
+    -webkit-transition : width 0 ease-in-out .6s;
+    -moz-transition : width 0 ease-in-out .6s;
+}
+
+input[type='radio']#button-2:checked ~ .image .pi2  {
+    z-index: 18;
+    width : inherit;
+    -webkit-transition : width .6s ease-in-out;
+    -moz-transition : width .6s ease-in-out;
+}
+
+input[type='radio']#button-2:checked ~ .image .pi1 , .pi3 , .pi4 {
+    width: 0;
+    -webkit-transition : width 0 ease-in-out .6s;
+    -moz-transition : width 0 ease-in-out .6s;
+}
+
+input[type='radio']#button-3:checked ~ .image .pi3  {
+    z-index: 18;
+    width : inherit;
+    -webkit-transition : width .6s ease-in-out;
+    -moz-transition : width .6s ease-in-out;
+}
+
+input[type='radio']#button-3:checked ~ .image .pi1 , .pi2 , .pi4 {
+    width: 0;
+    -webkit-transition : width 0 ease-in-out .6s;
+    -moz-transition : width 0 ease-in-out .6s;
+}
+
+input[type='radio']#button-4:checked ~ .image .pi4  {
+    z-index: 18;
+    width : inherit;
+    -webkit-transition : width .6s ease-in-out;
+    -moz-transition : width .6s ease-in-out;
+}
+
+input[type='radio']#button-4:checked ~ .image .pi1 , .pi2 , .pi3 {
+    width: 0;
+    -webkit-transition : width 0 ease-in-out .6s;
+    -moz-transition : width 0 ease-in-out .6s;
+}
+
+.on{
+    width: 600px;
+    position: absolute;
+    z-index: 50;
+}
+
+li{
+    float: left;
+    width: 149px;
+    list-style: none;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    height: 401px;
+    border-left-width : 1px;
+    border-left-style:  solid;
+    border-image: -webkit-linear-gradient( rgba(219, 219, 219,0) 13% , rgba(232, 232, 232,0.5) 42%, rgb(255, 255, 255) 64%) 14% stretch;
+    border-image: -moz-linear-gradient( rgba(219, 219, 219,0) 13% , rgba(232, 232, 232,0.5) 42%, rgb(255, 255, 255) 64%) 14% stretch;
+}
+
+li:nth-child(1){
+    border : 0;
+}
